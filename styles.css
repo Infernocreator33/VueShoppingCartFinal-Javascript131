@@ -1,0 +1,75 @@
+div#selection{
+    border: 3px solid lightskyblue;
+    width: 60%;
+    background-color: greenyellow;
+    display: inline-flex;
+    color: maroon;
+}
+div#app
+{
+    padding-left: 5%;
+    display: inline-flex;
+    width: 100%;
+    background-color: maroon;
+}
+div#cart{
+
+    border: 3px solid greenyellow;
+    display: inline-flex;
+    flex-flow: column;
+    width: 40%;
+    background-color: lightskyblue;
+    color:  maroon;
+    height: 700px;
+    font-size: 18px;
+}
+div#game{
+    height: 568px;
+    padding-right: 20px;
+
+}
+#redRemove
+{
+    height: 20px;
+    width: 20px;
+}
+#logo
+{
+    height: 50px;
+    width: 50px;
+}
+#shoppingImage
+{
+    height: 300px;
+    width: 200px;
+}
+#name, #subtotal
+{
+    font-weight: bold;
+    font-size: 20px;
+}
+#total
+{
+    font-weight: bold;
+    font-size: 24px;
+}
+h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: greenyellow;
+    height: 100px;
+    font-size: 36px;
+}
+h2
+{
+    font-size: 30px;
+    font-weight: bold;
+}
+#addButton
+{
+    color: lightskyblue;
+    background-color: maroon;
+}
+body
+{
+    background-color: maroon;
+}

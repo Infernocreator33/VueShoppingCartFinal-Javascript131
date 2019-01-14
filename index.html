@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vue Shopping Cart</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body class="container-fluid text-center">
+        <!--start of bootstrap-->
+
+        <h1 style="background-color: maroon"class="jumbotron">Zack's Remastered Games From Early 2000's</h1>
+        <!--start of vue-->
+        <div id="app">
+           
+                        <!--start of cartItems-->
+            <div id="cart">
+                <h2 id="cartHeader">Shopping Cart</h2>
+                <ol>
+                    <div v-if="game.ordered > 0" v-for="game in games">
+                        <li>
+                            <img id="logo" v-bind:src="game.imgSrc">
+                            {{game.name}}  Price: {{game.price}} Amount Ordered: {{game.ordered}}
+                             <span @click="removeThis(game)">
+                                  <img id="redRemove"src="redRemove.jpg"> 
+                            </span>
+                        </li>
+                        <div>Subtotal: <span id="subtotal">${{game.subtotal.toFixed(2)}}</span></div>
+                    </div>
+                </ol>
+                <h4 v-if="totalPrice > 0">Total Price: <span id="total">${{totalPrice.toFixed(2)}}</span>  </h4>
+
+                <h4 v-if="numItems > 0">Items in the list: {{numItems}}    </h4>
+                <p style="font-weight:bold">Selected Item: {{itemSelected}}</p>
+            </div>
+            <!--start of games available-->
+           <div id="selection"class="jumbotron" style="border: 3px solid lightskyblue"> 
+            <div id="game" class="text-center" v-for="game in games">
+                <p id="name">{{game.name}}</p>
+                <p><img id="shoppingImage"v-bind:src="game.imgSrc" @click="AddItem(game)"></p>
+                <p>Price:  $<span style="font-weight: bold">{{game.price}}</span></p>
+                <p>Date of Original PS2 release: {{game.dateFirstMade}}</p>
+                <p>Date of Latest PS4 release: {{game.dateLastMade}}</p>
+                <p>Quantity in stock: <span style="font-weight: bold"> {{game.quantity}} {{game.message}}</span></p>
+                <p><button id="addButton"v-if="game.quantity > 0" @click="AddItem(game)">Add to Cart</button></p>
+            </div>
+            </div>
+            </div>
+            <script src="shopping.js"></script>
+        </body>
+        </html>
+     

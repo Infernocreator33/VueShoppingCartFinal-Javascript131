@@ -1,6 +1,6 @@
 div#selection{
     border: 3px solid lightskyblue;
-    width: 60%;
+    width: 70%;
     background-color: greenyellow;
     display: inline-flex;
     color: maroon;
@@ -17,7 +17,7 @@ div#cart{
     border: 3px solid greenyellow;
     display: inline-flex;
     flex-flow: column;
-    width: 40%;
+    width: 30%;
     background-color: lightskyblue;
     color:  maroon;
     height: 700px;
